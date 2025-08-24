@@ -21,9 +21,23 @@ export default defineType({
       title: 'Long Description',
       type: 'array',
       of: [{ type: 'block' }]
+    }),
+    defineField({
+      name: 'features',
+      title: 'Key Features',
+      type: 'array',
+      of: [{ type: 'string' }]
+    }),
+    defineField({
+      name: 'seoMeta',
+      title: 'SEO Settings',
+      type: 'seoMeta'
     })
   ],
   preview: {
-    select: { title: 'productId', subtitle: 'tagline' }
+    select: { 
+      title: 'productId', 
+      subtitle: 'tagline' 
+    }
   }
 })
