@@ -109,4 +109,39 @@
   .text-3xl-semi {
     @apply text-[32px] leading-[44px] font-semibold;
   }
+
+  /* 跑馬燈動畫樣式 */
+  @keyframes marquee-1 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-36px); }
+  }
+
+  @keyframes marquee-2 {
+    0%, 16.66%, 50%, 66.66%, 100% { transform: translateY(0); }
+    33.33% { transform: translateY(-36px); }
+    83.33% { transform: translateY(-36px); }
+  }
+
+  @keyframes marquee-3 {
+    0%, 11.11%, 33.33%, 44.44%, 66.66%, 77.77%, 100% { transform: translateY(0); }
+    22.22% { transform: translateY(-36px); }
+    55.55% { transform: translateY(-72px); }
+    88.88% { transform: translateY(-72px); }
+  }
+
+  .animate-marquee-1 {
+    animation: marquee-1 var(--marquee-duration, 6s) infinite;
+  }
+
+  .animate-marquee-2 {
+    animation: marquee-2 var(--marquee-duration, 6s) infinite;
+  }
+
+  .animate-marquee-3 {
+    animation: marquee-3 var(--marquee-duration, 9s) infinite;
+  }
+
+  .hover\\:animation-paused:hover {
+    animation-play-state: paused;
+  }
 }
